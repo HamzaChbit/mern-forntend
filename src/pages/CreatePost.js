@@ -20,7 +20,7 @@ export default function CreatePost() {
     const response = await fetch(`${process.env.REACT_APP_URL}/post`, {
       method: 'POST',
       body: data,
-      credentials: 'include',
+     
     });
     if (response.ok) {
       setRedirect(true);

@@ -34,7 +34,7 @@ export default function EditPost() {
     const response = await fetch(`${process.env.REACT_APP_URL}/post`, {
       method: 'PUT',
       body: data,
-      credentials: 'include',
+     
     });
     if (response.ok) {
       setRedirect(true);
