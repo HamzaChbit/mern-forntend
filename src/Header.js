@@ -5,7 +5,7 @@ import {UserContext} from "./UserContext";
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch("https://mern-stack-chbit-app-backend.onrender.com/api/profile", {
+    fetch("https://mern-bakend.vercel.app/api/profile", {
       
     }).then(response => {
       response.json().then(userInfo => {
