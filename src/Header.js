@@ -5,8 +5,8 @@ import {UserContext} from "./UserContext";
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_URL}/profile`, {
-      credentials: 'include',
+    fetch("https://mern-stack-chbit-app-backend.onrender.com/api/profile", {
+      
     }).then(response => {
       response.json().then(userInfo => {
         setUserInfo(userInfo);
@@ -15,8 +15,8 @@ export default function Header() {
   }, []);
 
   function logout() {
-    fetch(`${process.env.REACT_APP_URL}/logout`, {
-      credentials: 'include',
+    fetch("https://mern-stack-chbit-app-backend.onrender.com/api/logout", {
+      
       method: 'POST',
     });
     setUserInfo(null);

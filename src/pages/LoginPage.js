@@ -9,11 +9,11 @@ export default function LoginPage() {
   const {setUserInfo} = useContext(UserContext);
   async function login(ev) {
     ev.preventDefault();
-    const response = await fetch(`${process.env.REACT_APP_URL}/login`, {
+    const response = await fetch("https://mern-stack-chbit-app-backend.onrender.com/api/login", {
       method: 'POST',
       body: JSON.stringify({username, password}),
       headers: {'Content-Type':'application/json'},
-      credentials: 'include',
+     
     });
     if (response.ok) {
       response.json().then(userInfo => {

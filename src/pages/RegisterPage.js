@@ -7,7 +7,7 @@ const RegisterPage = () => {
  async function  register  (ev)   {
  
   ev.preventDefault();
-  const response = await fetch(`${process.env.REACT_APP_URL}/register`, {
+  const response = await fetch("https://mern-stack-chbit-app-backend.onrender.com/api/register", {
     method: 'POST',
     body: JSON.stringify({username,password}),
     headers: {'Content-Type':'application/json'},
