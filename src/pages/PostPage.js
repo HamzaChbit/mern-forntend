@@ -9,7 +9,7 @@ export default function PostPage() {
   const {userInfo} = useContext(UserContext);
   const {id} = useParams();
   useEffect(() => {
-    fetch(`https://mern-bakend.vercel.app/api/post/${id}`)
+    fetch(`https://mern-stack-chbit-app-backend.onrender.com/api/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
